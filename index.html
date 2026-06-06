@@ -3,254 +3,280 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Precision Automotive</title>
+<title>Gutierrez Tire Shop</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg: #0d0f12;
-  --panel: #14171c;
-  --panel-2: #1a1e24;
-  --line: #262b33;
-  --text: #c3cad4;
-  --muted: #7c8694;
-  --white: #f5f7fa;
-  --lime: #c5f82a;
-  --lime-dark: #a8d916;
-  --teal: #2dd4bf;
+  --bg: #fbfaf8;
+  --ink: #15171c;
+  --ink-soft: #383b42;
+  --muted: #6a7280;
+  --line: #e9e6e0;
+  --card: #ffffff;
+  --blue: #0b5cff;
+  --blue-dark: #0847cc;
+  --blue-soft: #eaf1ff;
+  --amber: #ff9500;
+  --green: #16a34a;
+  --dark: #15171c;
 }
 
 html { scroll-behavior: smooth; }
-body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+body { font-family: 'Manrope', sans-serif; background: var(--bg); color: var(--ink-soft); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
 
 /* TOPBAR */
-.topbar { background: var(--lime); color: #0d0f12; padding: 9px 0; font-size: 13px; font-weight: 700; text-align: center; letter-spacing: 0.01em; }
-.topbar a { color: #0d0f12; text-decoration: none; }
+.topbar { background: var(--dark); color: #c3c8d2; padding: 10px 0; font-size: 13px; }
+.topbar-inner { max-width: 1180px; margin: 0 auto; padding: 0 32px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+.topbar a { color: #fff; text-decoration: none; font-weight: 700; }
 
 /* NAV */
-nav { position: sticky; top: 0; z-index: 999; background: rgba(13,15,18,0.82); backdrop-filter: blur(20px); border-bottom: 1px solid var(--line); }
-.nav-inner { max-width: 1180px; margin: 0 auto; padding: 0 32px; height: 78px; display: flex; align-items: center; justify-content: space-between; }
-.logo { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 800; color: var(--white); letter-spacing: -0.01em; display: flex; align-items: center; gap: 10px; }
-.logo-badge { width: 36px; height: 36px; background: var(--lime); border-radius: 9px; display: flex; align-items: center; justify-content: center; color: #0d0f12; font-size: 18px; font-weight: 800; }
+nav { position: sticky; top: 0; z-index: 999; background: rgba(251,250,248,0.85); backdrop-filter: blur(20px); border-bottom: 1px solid var(--line); }
+.nav-inner { max-width: 1180px; margin: 0 auto; padding: 0 32px; height: 76px; display: flex; align-items: center; justify-content: space-between; }
+.logo { font-family: 'Sora', sans-serif; font-size: 21px; font-weight: 800; color: var(--ink); letter-spacing: -0.02em; display: flex; align-items: center; gap: 11px; }
+.logo-badge { width: 38px; height: 38px; background: var(--blue); border-radius: 11px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 19px; }
 .nav-links { display: flex; gap: 34px; list-style: none; align-items: center; }
-.nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 600; transition: color 0.2s; }
-.nav-links a:hover { color: var(--white); }
-.nav-cta { background: var(--lime); color: #0d0f12 !important; padding: 11px 22px; border-radius: 8px; font-weight: 700 !important; transition: all 0.25s !important; }
-.nav-cta:hover { background: var(--lime-dark) !important; }
+.nav-links a { color: var(--ink-soft); text-decoration: none; font-size: 14px; font-weight: 600; transition: color 0.2s; }
+.nav-links a:hover { color: var(--blue); }
+.nav-cta { background: var(--ink); color: #fff !important; padding: 11px 22px; border-radius: 100px; transition: all 0.25s !important; }
+.nav-cta:hover { background: var(--blue) !important; transform: translateY(-1px); }
 
 /* HERO */
-.hero { padding: 100px 0 90px; position: relative; overflow: hidden; }
-.hero::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle at 80% 20%, rgba(197,248,42,0.07) 0%, transparent 45%); }
-.hero::after { content: ''; position: absolute; inset: 0; background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: 64px 64px; opacity: 0.25; mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 30%, transparent 80%); }
-.hero-inner { max-width: 1180px; margin: 0 auto; padding: 0 32px; position: relative; z-index: 2; }
-.hero-top { text-align: center; max-width: 820px; margin: 0 auto 56px; }
-.hero-pill { display: inline-flex; align-items: center; gap: 9px; background: var(--panel); border: 1px solid var(--line); padding: 8px 18px; border-radius: 100px; font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 30px; }
-.hero-pill-dot { width: 8px; height: 8px; background: var(--lime); border-radius: 50%; box-shadow: 0 0 10px var(--lime); }
-.hero h1 { font-family: 'Syne', sans-serif; font-size: clamp(48px, 7vw, 88px); font-weight: 800; line-height: 0.98; color: var(--white); letter-spacing: -0.03em; margin-bottom: 26px; }
-.hero h1 span { color: var(--lime); }
-.hero-desc { font-size: 18px; line-height: 1.7; color: var(--muted); max-width: 540px; margin: 0 auto 38px; }
-.hero-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-.btn-lime { background: var(--lime); color: #0d0f12; padding: 17px 34px; font-size: 15px; font-weight: 700; text-decoration: none; border-radius: 10px; transition: all 0.25s; display: inline-flex; align-items: center; gap: 9px; }
-.btn-lime:hover { background: var(--lime-dark); transform: translateY(-2px); box-shadow: 0 14px 36px rgba(197,248,42,0.25); }
-.btn-ghost { background: var(--panel); border: 1px solid var(--line); color: var(--white); padding: 16px 30px; font-size: 15px; font-weight: 600; text-decoration: none; border-radius: 10px; transition: all 0.25s; }
-.btn-ghost:hover { border-color: var(--muted); transform: translateY(-2px); }
+.hero { padding: 90px 0 80px; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; top: -140px; right: -120px; width: 500px; height: 500px; background: radial-gradient(circle, var(--blue-soft) 0%, transparent 70%); border-radius: 50%; }
+.hero-inner { max-width: 1180px; margin: 0 auto; padding: 0 32px; display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 64px; align-items: center; position: relative; z-index: 2; }
+.hero-pill { display: inline-flex; align-items: center; gap: 8px; background: var(--card); border: 1px solid var(--line); padding: 7px 16px 7px 8px; border-radius: 100px; font-size: 13px; font-weight: 600; color: var(--ink-soft); margin-bottom: 26px; box-shadow: 0 2px 8px rgba(0,0,0,0.03); }
+.hero-pill-badge { background: var(--amber); color: #fff; font-size: 11px; font-weight: 800; padding: 3px 11px; border-radius: 100px; }
+.hero h1 { font-family: 'Sora', sans-serif; font-size: clamp(44px, 5.6vw, 74px); font-weight: 800; line-height: 1.0; color: var(--ink); letter-spacing: -0.03em; margin-bottom: 22px; }
+.hero h1 span { color: var(--blue); }
+.hero-desc { font-size: 18px; line-height: 1.7; color: var(--muted); max-width: 440px; margin-bottom: 36px; }
+.hero-actions { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; margin-bottom: 34px; }
+.btn-primary { background: var(--blue); color: #fff; padding: 16px 32px; font-size: 15px; font-weight: 700; text-decoration: none; border-radius: 100px; transition: all 0.25s; display: inline-flex; align-items: center; gap: 9px; box-shadow: 0 8px 24px rgba(11,92,255,0.25); }
+.btn-primary:hover { background: var(--blue-dark); transform: translateY(-2px); box-shadow: 0 12px 32px rgba(11,92,255,0.35); }
+.btn-soft { background: var(--card); border: 1px solid var(--line); color: var(--ink); padding: 15px 28px; font-size: 15px; font-weight: 600; text-decoration: none; border-radius: 100px; transition: all 0.25s; }
+.btn-soft:hover { border-color: var(--ink); transform: translateY(-2px); }
+.hero-trust { display: flex; align-items: center; gap: 14px; }
+.hero-trust-stars { color: var(--amber); font-size: 16px; letter-spacing: 1px; }
+.hero-trust-text { font-size: 14px; color: var(--muted); }
+.hero-trust-text strong { color: var(--ink); }
 
-/* HERO STAT BAR */
-.hero-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; max-width: 900px; margin: 0 auto; }
-.hbar { background: var(--panel); padding: 30px 20px; text-align: center; transition: background 0.3s; }
-.hbar:hover { background: var(--panel-2); }
-.hbar-n { font-family: 'Syne', sans-serif; font-size: 38px; font-weight: 800; color: var(--white); line-height: 1; letter-spacing: -0.02em; }
-.hbar-n span { color: var(--lime); }
-.hbar-l { font-size: 13px; color: var(--muted); margin-top: 8px; }
+/* HERO VISUAL */
+.hero-visual { position: relative; }
+.visual-card { background: var(--dark); border-radius: 24px; padding: 40px; color: #fff; position: relative; overflow: hidden; box-shadow: 0 30px 60px rgba(21,23,28,0.25); }
+.visual-card::before { content: ''; position: absolute; top: -60px; right: -60px; width: 200px; height: 200px; background: var(--blue); border-radius: 50%; opacity: 0.28; }
+.visual-label { font-size: 13px; font-weight: 600; color: #868d9b; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 10px; position: relative; }
+.visual-phone { font-family: 'Sora', sans-serif; font-size: 38px; font-weight: 700; color: #fff; text-decoration: none; display: block; letter-spacing: -0.01em; position: relative; transition: color 0.2s; }
+.visual-phone:hover { color: #6da0ff; }
+.visual-hours { font-size: 14px; color: #868d9b; margin-top: 8px; position: relative; }
+.visual-divider { height: 1px; background: rgba(255,255,255,0.1); margin: 28px 0; position: relative; }
+.visual-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; position: relative; }
+.vstat-n { font-family: 'Sora', sans-serif; font-size: 30px; font-weight: 700; color: #fff; line-height: 1; }
+.vstat-l { font-size: 12px; color: #868d9b; margin-top: 5px; }
+.float-badge { position: absolute; background: var(--card); border-radius: 16px; padding: 16px 20px; box-shadow: 0 12px 32px rgba(0,0,0,0.12); display: flex; align-items: center; gap: 12px; bottom: -24px; left: -28px; }
+.float-icon { width: 40px; height: 40px; background: var(--amber); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; color: #fff; }
+.float-text strong { display: block; font-size: 14px; color: var(--ink); font-weight: 700; }
+.float-text span { font-size: 12px; color: var(--muted); }
+
+/* TRUST STRIP */
+.trust-strip { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--card); padding: 28px 0; }
+.trust-strip-inner { max-width: 1180px; margin: 0 auto; padding: 0 32px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
+.trust-feat { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; color: var(--ink-soft); }
+.trust-feat-icon { font-size: 18px; }
 
 /* SECTION */
 .section { padding: 100px 0; }
 .container { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
-.sec-head { max-width: 620px; margin-bottom: 60px; }
-.sec-head.center { text-align: center; margin-left: auto; margin-right: auto; }
-.sec-tag { display: inline-flex; align-items: center; gap: 9px; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--lime); margin-bottom: 16px; }
-.sec-tag::before { content: ''; width: 28px; height: 2px; background: var(--lime); }
-.sec-head.center .sec-tag { justify-content: center; }
-.sec-title { font-family: 'Syne', sans-serif; font-size: clamp(34px, 4.4vw, 52px); font-weight: 800; color: var(--white); letter-spacing: -0.025em; line-height: 1.05; margin-bottom: 18px; }
+.sec-head { text-align: center; max-width: 600px; margin: 0 auto 60px; }
+.sec-head.left { text-align: left; margin-left: 0; }
+.sec-tag { display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blue); margin-bottom: 14px; }
+.sec-title { font-family: 'Sora', sans-serif; font-size: clamp(32px, 4.2vw, 48px); font-weight: 800; color: var(--ink); letter-spacing: -0.025em; line-height: 1.08; margin-bottom: 16px; }
 .sec-sub { font-size: 17px; color: var(--muted); line-height: 1.7; }
 
-/* BRANDS */
-.brands { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
-.brand-chip { background: var(--panel); border: 1px solid var(--line); border-radius: 100px; padding: 12px 26px; font-family: 'Syne', sans-serif; font-size: 16px; font-weight: 700; color: var(--text); transition: all 0.25s; }
-.brand-chip:hover { border-color: var(--lime); color: var(--white); transform: translateY(-3px); }
-
 /* SERVICES */
-.services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-.svc { background: var(--panel); border: 1px solid var(--line); border-radius: 18px; padding: 34px 30px; transition: all 0.3s; position: relative; overflow: hidden; }
-.svc::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--lime); transform: scaleX(0); transform-origin: left; transition: transform 0.35s; }
-.svc:hover { background: var(--panel-2); transform: translateY(-6px); }
-.svc:hover::after { transform: scaleX(1); }
-.svc-num { font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; color: var(--lime); margin-bottom: 18px; letter-spacing: 0.05em; }
-.svc-icon { font-size: 32px; margin-bottom: 16px; display: block; }
-.svc h3 { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 10px; letter-spacing: -0.01em; }
+.services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.svc { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 32px; transition: all 0.3s; }
+.svc:hover { transform: translateY(-6px); box-shadow: 0 20px 44px rgba(21,23,28,0.08); border-color: transparent; }
+.svc-icon { width: 56px; height: 56px; border-radius: 14px; background: var(--blue-soft); display: flex; align-items: center; justify-content: center; font-size: 26px; margin-bottom: 20px; transition: all 0.3s; }
+.svc:hover .svc-icon { background: var(--blue); transform: scale(1.05); }
+.svc h3 { font-family: 'Sora', sans-serif; font-size: 19px; font-weight: 700; color: var(--ink); margin-bottom: 10px; letter-spacing: -0.01em; }
 .svc p { font-size: 14px; color: var(--muted); line-height: 1.65; }
 
-/* STORY split */
-.story { background: var(--panel); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-.story-left h2 { font-family: 'Syne', sans-serif; font-size: clamp(30px, 4vw, 46px); font-weight: 800; color: var(--white); letter-spacing: -0.025em; line-height: 1.08; margin-bottom: 20px; }
-.story-left p { font-size: 16px; color: var(--muted); line-height: 1.8; margin-bottom: 18px; }
-.story-points { display: flex; flex-direction: column; gap: 14px; margin-top: 30px; }
-.spoint { display: flex; gap: 14px; align-items: center; }
-.spoint-icon { width: 28px; height: 28px; border-radius: 8px; background: rgba(197,248,42,0.12); color: var(--lime); display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; }
-.spoint span { font-size: 15px; color: var(--text); font-weight: 500; }
-.story-visual { background: var(--bg); border: 1px solid var(--line); border-radius: 22px; padding: 40px; position: relative; overflow: hidden; }
-.story-visual::before { content: ''; position: absolute; bottom: -40px; right: -40px; width: 160px; height: 160px; background: var(--lime); border-radius: 50%; opacity: 0.08; }
-.sv-quote { font-family: 'Syne', sans-serif; font-size: 24px; font-weight: 700; color: var(--white); line-height: 1.3; letter-spacing: -0.01em; margin-bottom: 24px; position: relative; }
-.sv-quote span { color: var(--lime); }
-.sv-rating { display: flex; align-items: center; gap: 12px; padding-top: 24px; border-top: 1px solid var(--line); position: relative; }
-.sv-stars { color: #f5a623; font-size: 18px; letter-spacing: 2px; }
-.sv-rating-text { font-size: 14px; color: var(--muted); }
+/* WHY */
+.why { background: var(--card); }
+.why-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 80px; align-items: center; }
+.why-left h2 { font-family: 'Sora', sans-serif; font-size: clamp(30px, 3.8vw, 44px); font-weight: 800; color: var(--ink); letter-spacing: -0.025em; line-height: 1.1; margin-bottom: 18px; }
+.why-left p { font-size: 16px; color: var(--muted); line-height: 1.75; margin-bottom: 28px; }
+.why-points { display: flex; flex-direction: column; gap: 16px; }
+.why-point { display: flex; gap: 14px; align-items: flex-start; }
+.why-check { width: 26px; height: 26px; border-radius: 50%; background: var(--green); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; }
+.why-point-text strong { display: block; font-size: 15px; color: var(--ink); font-weight: 700; margin-bottom: 2px; }
+.why-point-text span { font-size: 14px; color: var(--muted); }
+.why-right { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.stat-tile { background: var(--bg); border: 1px solid var(--line); border-radius: 18px; padding: 30px 26px; }
+.stat-tile.dark { background: var(--dark); border-color: var(--dark); }
+.stat-tile.blue { background: var(--blue); border-color: var(--blue); }
+.stat-tile-n { font-family: 'Sora', sans-serif; font-size: 44px; font-weight: 800; line-height: 1; letter-spacing: -0.02em; color: var(--ink); }
+.stat-tile.dark .stat-tile-n, .stat-tile.blue .stat-tile-n { color: #fff; }
+.stat-tile-l { font-size: 14px; color: var(--muted); margin-top: 8px; }
+.stat-tile.dark .stat-tile-l, .stat-tile.blue .stat-tile-l { color: rgba(255,255,255,0.75); }
 
 /* REVIEWS */
-.reviews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-.rev { background: var(--panel); border: 1px solid var(--line); border-radius: 18px; padding: 32px 28px; transition: all 0.3s; }
-.rev:hover { border-color: rgba(197,248,42,0.3); transform: translateY(-4px); }
-.rev-stars { color: #f5a623; font-size: 15px; letter-spacing: 1px; margin-bottom: 16px; }
-.rev-text { font-size: 14px; color: var(--text); line-height: 1.75; margin-bottom: 22px; }
+.reviews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.rev { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 30px; transition: all 0.3s; }
+.rev:hover { box-shadow: 0 16px 40px rgba(21,23,28,0.07); transform: translateY(-4px); }
+.rev-stars { color: var(--amber); font-size: 15px; letter-spacing: 1px; margin-bottom: 14px; }
+.rev-text { font-size: 15px; color: var(--ink-soft); line-height: 1.7; margin-bottom: 22px; }
 .rev-author { display: flex; align-items: center; gap: 12px; }
-.rev-avatar { width: 42px; height: 42px; border-radius: 12px; background: var(--lime); color: #0d0f12; display: flex; align-items: center; justify-content: center; font-family: 'Syne', sans-serif; font-weight: 700; font-size: 15px; }
-.rev-name { font-size: 14px; font-weight: 700; color: var(--white); }
+.rev-avatar { width: 42px; height: 42px; border-radius: 50%; background: var(--blue-soft); color: var(--blue); display: flex; align-items: center; justify-content: center; font-family: 'Sora', sans-serif; font-weight: 700; font-size: 15px; }
+.rev-name { font-size: 14px; font-weight: 700; color: var(--ink); }
 .rev-meta { font-size: 12px; color: var(--muted); margin-top: 1px; }
 
 /* CTA */
 .cta { padding: 100px 0; }
-.cta-card { background: linear-gradient(135deg, var(--panel-2) 0%, var(--panel) 100%); border: 1px solid var(--line); border-radius: 28px; padding: 64px; position: relative; overflow: hidden; }
-.cta-card::before { content: ''; position: absolute; top: -100px; right: -60px; width: 340px; height: 340px; background: var(--lime); border-radius: 50%; opacity: 0.07; }
-.cta-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 56px; align-items: center; }
-.cta-grid h2 { font-family: 'Syne', sans-serif; font-size: clamp(32px, 4.2vw, 50px); font-weight: 800; color: var(--white); letter-spacing: -0.025em; line-height: 1.05; margin-bottom: 16px; }
-.cta-grid p { font-size: 17px; color: var(--muted); line-height: 1.7; margin-bottom: 32px; }
-.cta-box { background: var(--bg); border: 1px solid var(--line); border-radius: 18px; padding: 30px; }
-.cta-box-label { font-size: 13px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
-.cta-box-phone { font-family: 'Syne', sans-serif; font-size: 32px; font-weight: 800; color: var(--white); text-decoration: none; display: block; letter-spacing: -0.01em; transition: color 0.2s; }
-.cta-box-phone:hover { color: var(--lime); }
-.cta-box-addr { font-size: 14px; color: var(--muted); margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--line); line-height: 1.6; }
+.cta-card { background: var(--dark); border-radius: 28px; padding: 64px; position: relative; overflow: hidden; }
+.cta-card::before { content: ''; position: absolute; top: -80px; right: -40px; width: 320px; height: 320px; background: var(--blue); border-radius: 50%; opacity: 0.2; }
+.cta-card::after { content: ''; position: absolute; bottom: -100px; left: 10%; width: 240px; height: 240px; border: 50px solid rgba(255,255,255,0.04); border-radius: 50%; }
+.cta-inner { position: relative; z-index: 2; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: center; }
+.cta-inner h2 { font-family: 'Sora', sans-serif; font-size: clamp(32px, 4vw, 48px); font-weight: 800; color: #fff; letter-spacing: -0.025em; line-height: 1.08; margin-bottom: 16px; }
+.cta-inner p { font-size: 17px; color: #9aa1af; line-height: 1.7; margin-bottom: 32px; }
+.cta-phone-box { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 18px; padding: 30px; }
+.cta-phone-label { font-size: 13px; color: #868d9b; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
+.cta-phone-num { font-family: 'Sora', sans-serif; font-size: 32px; font-weight: 700; color: #fff; text-decoration: none; display: block; transition: color 0.2s; }
+.cta-phone-num:hover { color: #6da0ff; }
+.cta-addr { font-size: 14px; color: #9aa1af; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.1); line-height: 1.6; }
 
 /* FOOTER */
-footer { background: var(--panel); border-top: 1px solid var(--line); padding: 60px 0 30px; }
+footer { background: var(--card); border-top: 1px solid var(--line); padding: 60px 0 30px; }
 .foot-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 56px; padding-bottom: 44px; border-bottom: 1px solid var(--line); margin-bottom: 24px; }
-.foot-logo { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 800; color: var(--white); margin-bottom: 14px; display: flex; align-items: center; gap: 9px; }
+.foot-logo { font-family: 'Sora', sans-serif; font-size: 21px; font-weight: 800; color: var(--ink); margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
 .foot-desc { font-size: 14px; color: var(--muted); line-height: 1.7; max-width: 290px; }
-.foot-col h4 { font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--white); margin-bottom: 18px; }
+.foot-col h4 { font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink); margin-bottom: 18px; }
 .foot-links { list-style: none; display: flex; flex-direction: column; gap: 11px; }
 .foot-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color 0.2s; }
-.foot-links a:hover { color: var(--lime); }
+.foot-links a:hover { color: var(--blue); }
 .foot-bottom { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); }
 
 .reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.7s, transform 0.7s; }
 .reveal.visible { opacity: 1; transform: none; }
 
 @media (max-width: 900px) {
-  .hero-bar { grid-template-columns: 1fr 1fr; }
+  .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+  .hero-visual { display: none; }
   .services { grid-template-columns: 1fr; }
-  .story-grid { grid-template-columns: 1fr; gap: 40px; }
+  .why-grid { grid-template-columns: 1fr; gap: 40px; }
   .reviews { grid-template-columns: 1fr; }
-  .cta-grid { grid-template-columns: 1fr; gap: 32px; }
-  .cta-card { padding: 40px 26px; }
+  .cta-inner { grid-template-columns: 1fr; gap: 32px; }
+  .cta-card { padding: 40px 28px; }
   .foot-grid { grid-template-columns: 1fr; gap: 32px; }
   .nav-links { display: none; }
-  .container, .nav-inner, .hero-inner { padding-left: 20px; padding-right: 20px; }
+  .container, .nav-inner, .hero-inner, .topbar-inner, .trust-strip-inner { padding-left: 20px; padding-right: 20px; }
 }
 </style>
 </head>
 <body>
 
-<div class="topbar">⭐ Anaheim's Trusted Specialist for Japanese & German Vehicles — <a href="tel:7145833858">Call (714) 583-3858</a></div>
+<div class="topbar">
+  <div class="topbar-inner">
+    <span>📍 601 N Fairview St, Santa Ana, CA</span>
+    <span>🛞 Open 7 Days · <a href="tel:7148364822">Call (714) 836-4822</a></span>
+  </div>
+</div>
 
 <nav>
   <div class="nav-inner">
-    <div class="logo"><span class="logo-badge">P</span> Precision Automotive</div>
+    <div class="logo"><span class="logo-badge">🛞</span> Gutierrez Tires</div>
     <ul class="nav-links">
       <li><a href="#services">Services</a></li>
-      <li><a href="#story">About</a></li>
+      <li><a href="#why">Why Us</a></li>
       <li><a href="#reviews">Reviews</a></li>
-      <li><a href="tel:7145833858" class="nav-cta">Call Now</a></li>
+      <li><a href="tel:7148364822" class="nav-cta">Call Now</a></li>
     </ul>
   </div>
 </nav>
 
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-top">
-      <div class="hero-pill"><span class="hero-pill-dot"></span> Specialists in Toyota · Lexus · Honda · BMW · Mercedes</div>
-      <h1>Precision Work.<br><span>Every Time.</span></h1>
-      <p class="hero-desc">Dealership-quality repairs without the dealership price. Precision Automotive delivers expert service for import and luxury vehicles across Orange County.</p>
+    <div>
+      <div class="hero-pill"><span class="hero-pill-badge">28 YRS</span> Serving Santa Ana since 1988</div>
+      <h1>Back On the Road,<br><span>Fast.</span></h1>
+      <p class="hero-desc">New tires, flat repairs, and wheel service done quick and done right. Nearly three decades keeping Santa Ana drivers rolling — at prices that can't be beat.</p>
       <div class="hero-actions">
-        <a href="tel:7145833858" class="btn-lime">📞 Call (714) 583-3858</a>
-        <a href="#services" class="btn-ghost">Our Services</a>
+        <a href="tel:7148364822" class="btn-primary">📞 Call (714) 836-4822</a>
+        <a href="#services" class="btn-soft">Our Services</a>
+      </div>
+      <div class="hero-trust">
+        <span class="hero-trust-stars">★★★★★</span>
+        <span class="hero-trust-text"><strong>Trusted</strong> by local drivers for 28 years</span>
       </div>
     </div>
-    <div class="hero-bar reveal">
-      <div class="hbar"><div class="hbar-n">14<span>+</span></div><div class="hbar-l">Years in Business</div></div>
-      <div class="hbar"><div class="hbar-n">5<span>★</span></div><div class="hbar-l">Customer Rated</div></div>
-      <div class="hbar"><div class="hbar-n">All</div><div class="hbar-l">Import Brands</div></div>
-      <div class="hbar"><div class="hbar-n">6</div><div class="hbar-l">Days a Week</div></div>
+    <div class="hero-visual">
+      <div class="visual-card">
+        <div class="visual-label">Call Us Today</div>
+        <a href="tel:7148364822" class="visual-phone">(714) 836-4822</a>
+        <div class="visual-hours">Open 7 Days · 9:00 AM – 7:00 PM</div>
+        <div class="visual-divider"></div>
+        <div class="visual-stats">
+          <div><div class="vstat-n">28+</div><div class="vstat-l">Years</div></div>
+          <div><div class="vstat-n">$15</div><div class="vstat-l">Flat Repair</div></div>
+          <div><div class="vstat-n">7</div><div class="vstat-l">Days/Wk</div></div>
+        </div>
+      </div>
+      <div class="float-badge">
+        <div class="float-icon">⚡</div>
+        <div class="float-text"><strong>In & Out Fast</strong><span>Most jobs under 30 min</span></div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section" style="padding-top: 0;">
-  <div class="container">
-    <div class="sec-head center reveal">
-      <div class="sec-tag">We Specialize In</div>
-      <h2 class="sec-title">Experts in Your Make</h2>
-    </div>
-    <div class="brands reveal">
-      <div class="brand-chip">Toyota</div>
-      <div class="brand-chip">Lexus</div>
-      <div class="brand-chip">Honda</div>
-      <div class="brand-chip">Acura</div>
-      <div class="brand-chip">BMW</div>
-      <div class="brand-chip">Mercedes-Benz</div>
-    </div>
+<div class="trust-strip">
+  <div class="trust-strip-inner">
+    <div class="trust-feat"><span class="trust-feat-icon">🛞</span> New & Used Tires</div>
+    <div class="trust-feat"><span class="trust-feat-icon">⚡</span> Fast Flat Repairs</div>
+    <div class="trust-feat"><span class="trust-feat-icon">💰</span> Unbeatable Prices</div>
+    <div class="trust-feat"><span class="trust-feat-icon">♿</span> Wheelchair Accessible</div>
+    <div class="trust-feat"><span class="trust-feat-icon">💳</span> All Cards Accepted</div>
   </div>
-</section>
+</div>
 
-<section class="section" id="services" style="padding-top: 40px;">
+<section class="section" id="services">
   <div class="container">
     <div class="sec-head reveal">
       <div class="sec-tag">Our Services</div>
-      <h2 class="sec-title">Complete Auto Care</h2>
-      <p class="sec-sub">From routine maintenance to complex diagnostics — every job done with precision and backed by years of specialized experience.</p>
+      <h2 class="sec-title">Everything Tires & Wheels</h2>
+      <p class="sec-sub">From a quick flat repair to a full set of new tires — we get you rolling fast and at a fair price.</p>
     </div>
     <div class="services reveal">
-      <div class="svc"><div class="svc-num">01</div><span class="svc-icon">🔍</span><h3>Diagnostics</h3><p>Advanced diagnostic equipment to pinpoint issues fast and accurately — no guesswork.</p></div>
-      <div class="svc"><div class="svc-num">02</div><span class="svc-icon">🔧</span><h3>Engine & Repair</h3><p>Expert engine work and major repairs for import and luxury vehicles, done right the first time.</p></div>
-      <div class="svc"><div class="svc-num">03</div><span class="svc-icon">🛑</span><h3>Brakes & Suspension</h3><p>Complete brake and suspension service to keep your vehicle safe and smooth on every drive.</p></div>
-      <div class="svc"><div class="svc-num">04</div><span class="svc-icon">🛢️</span><h3>Maintenance</h3><p>Factory-scheduled maintenance and oil services to protect your vehicle's value and longevity.</p></div>
-      <div class="svc"><div class="svc-num">05</div><span class="svc-icon">⚡</span><h3>Electrical</h3><p>Electrical system diagnosis and repair handled by techs who know import systems inside out.</p></div>
-      <div class="svc"><div class="svc-num">06</div><span class="svc-icon">🚗</span><h3>Mobile Service</h3><p>Need us to come to you? We offer mobile mechanic service for added convenience.</p></div>
+      <div class="svc"><div class="svc-icon">🛞</div><h3>New Tires</h3><p>A large selection of new tires for every vehicle and budget, from top trusted brands.</p></div>
+      <div class="svc"><div class="svc-icon">♻️</div><h3>Used Tires</h3><p>Quality used tires inspected for safety — a budget-friendly option to get you back on the road.</p></div>
+      <div class="svc"><div class="svc-icon">🔧</div><h3>Flat Repair</h3><p>Fast, affordable flat and puncture repairs. Many fixes done while you wait, starting at just $15.</p></div>
+      <div class="svc"><div class="svc-icon">⚖️</div><h3>Balancing & Rotation</h3><p>Keep your tires lasting longer and your ride smooth with expert balancing and rotation.</p></div>
+      <div class="svc"><div class="svc-icon">🔩</div><h3>Rim Repair</h3><p>Bent rim from a pothole? We can often straighten and save your wheel instead of replacing it.</p></div>
+      <div class="svc"><div class="svc-icon">🚗</div><h3>Mounting & Installation</h3><p>Professional tire mounting and installation done quickly so you're never waiting around.</p></div>
     </div>
   </div>
 </section>
 
-<section class="section story" id="story">
+<section class="section why" id="why">
   <div class="container">
-    <div class="story-grid">
-      <div class="story-left reveal">
-        <div class="sec-tag">Our Story</div>
-        <h2>Built on Referrals & Trust</h2>
-        <p>Precision Automotive started as a mobile mechanic business and grew into a full shop — entirely through word of mouth and quality work that speaks for itself.</p>
-        <p>For over a decade, we've specialized in the makes Orange County drivers depend on, earning loyal customers one honest repair at a time.</p>
-        <div class="story-points">
-          <div class="spoint"><div class="spoint-icon">✓</div><span>Specialized expertise in import & luxury brands</span></div>
-          <div class="spoint"><div class="spoint-icon">✓</div><span>Honest, detailed explanations before any work</span></div>
-          <div class="spoint"><div class="spoint-icon">✓</div><span>Dealership-quality service at a fair price</span></div>
+    <div class="why-grid">
+      <div class="why-left reveal">
+        <div class="sec-tag">Why Gutierrez</div>
+        <h2>28 Years of Doing Right by Drivers</h2>
+        <p>Since 1988, we've kept Santa Ana moving with honest service, fast turnaround, and prices that beat the big chains every time.</p>
+        <div class="why-points">
+          <div class="why-point"><div class="why-check">✓</div><div class="why-point-text"><strong>Honest, Fair Pricing</strong><span>We fix what we can and charge what's fair — like a $15 flat repair.</span></div></div>
+          <div class="why-point"><div class="why-check">✓</div><div class="why-point-text"><strong>Fast Turnaround</strong><span>Most jobs done in under 30 minutes so you're not stuck waiting.</span></div></div>
+          <div class="why-point"><div class="why-check">✓</div><div class="why-point-text"><strong>Decades of Experience</strong><span>Nearly 30 years of expertise on every make and model.</span></div></div>
         </div>
       </div>
-      <div class="story-visual reveal">
-        <div class="sv-quote">"Quality work and <span>honest service</span> — exactly what you want from a mechanic you can trust."</div>
-        <div class="sv-rating">
-          <span class="sv-stars">★★★★★</span>
-          <span class="sv-rating-text">Trusted by Orange County drivers</span>
-        </div>
+      <div class="why-right reveal">
+        <div class="stat-tile"><div class="stat-tile-n">28+</div><div class="stat-tile-l">Years in business</div></div>
+        <div class="stat-tile blue"><div class="stat-tile-n">$15</div><div class="stat-tile-l">Flat repairs from</div></div>
+        <div class="stat-tile dark"><div class="stat-tile-n">7</div><div class="stat-tile-l">Days open weekly</div></div>
+        <div class="stat-tile"><div class="stat-tile-n">30m</div><div class="stat-tile-l">Average job time</div></div>
       </div>
     </div>
   </div>
@@ -258,14 +284,14 @@ footer { background: var(--panel); border-top: 1px solid var(--line); padding: 6
 
 <section class="section" id="reviews">
   <div class="container">
-    <div class="sec-head center reveal">
+    <div class="sec-head reveal">
       <div class="sec-tag">Customer Reviews</div>
-      <h2 class="sec-title">What Drivers Say</h2>
+      <h2 class="sec-title">What Drivers Are Saying</h2>
     </div>
     <div class="reviews reveal">
-      <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">These guys know imports inside and out. Fixed my Lexus quickly and the price was way better than the dealer quoted me. Highly recommend.</p><div class="rev-author"><div class="rev-avatar">KH</div><div><div class="rev-name">Kevin H.</div><div class="rev-meta">Anaheim, CA</div></div></div></div>
-      <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">Honest, detailed, and they actually explain what's going on with your car. Found them through a referral and now they're my go-to shop.</p><div class="rev-author"><div class="rev-avatar">SM</div><div><div class="rev-name">Stephanie M.</div><div class="rev-meta">Placentia, CA</div></div></div></div>
-      <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">Brought my BMW in for an issue two other shops couldn't figure out. They diagnosed it right away and fixed it for a fair price. Great work.</p><div class="rev-author"><div class="rev-avatar">RT</div><div><div class="rev-name">Robert T.</div><div class="rev-meta">Yorba Linda, CA</div></div></div></div>
+      <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">Had a bent rim and a flat from a pothole. Another shop said I needed a whole new tire — the owner came out, straightened the rim, fixed it good as new, all for $15. This place is the real deal.</p><div class="rev-author"><div class="rev-avatar">VM</div><div><div class="rev-name">Vanessa M.</div><div class="rev-meta">Santa Ana, CA</div></div></div></div>
+      <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">Fast and efficient — in and out in less than 30 minutes. Prices are great and the service was friendly. Would definitely recommend to anyone needing tire work.</p><div class="rev-author"><div class="rev-avatar">JL</div><div><div class="rev-name">Jorge L.</div><div class="rev-meta">Santa Ana, CA</div></div></div></div>
+      <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">Been coming here for years. Honest people, fair prices, and they always take care of me quickly. The only tire shop I trust in the area.</p><div class="rev-author"><div class="rev-avatar">RC</div><div><div class="rev-name">Roberto C.</div><div class="rev-meta">Santa Ana, CA</div></div></div></div>
     </div>
   </div>
 </section>
@@ -273,17 +299,17 @@ footer { background: var(--panel); border-top: 1px solid var(--line); padding: 6
 <section class="cta">
   <div class="container">
     <div class="cta-card">
-      <div class="cta-grid">
+      <div class="cta-inner">
         <div class="reveal">
-          <h2>Ready to Get Your Car Handled?</h2>
-          <p>Give us a call for an honest assessment and a fair quote. Specialized service for your import or luxury vehicle — done with precision.</p>
-          <a href="tel:7145833858" class="btn-lime">📞 Call (714) 583-3858</a>
+          <h2>Need Tires or a Flat Fixed? Come See Us.</h2>
+          <p>Stop by or give us a call. Fast, friendly tire service at prices that beat the big chains — open 7 days a week.</p>
+          <a href="tel:7148364822" class="btn-primary">📞 Call (714) 836-4822</a>
         </div>
         <div class="reveal">
-          <div class="cta-box">
-            <div class="cta-box-label">Call or Visit</div>
-            <a href="tel:7145833858" class="cta-box-phone">(714) 583-3858</a>
-            <div class="cta-box-addr">📍 1631 N Placentia Ave, Ste U<br>Anaheim, CA 92806<br><br>Mon–Sat: 9:30 AM – 6:00 PM</div>
+          <div class="cta-phone-box">
+            <div class="cta-phone-label">Call or Visit</div>
+            <a href="tel:7148364822" class="cta-phone-num">(714) 836-4822</a>
+            <div class="cta-addr">📍 601 N Fairview St<br>Santa Ana, CA 92703<br><br>Open 7 Days · 9:00 AM – 7:00 PM</div>
           </div>
         </div>
       </div>
@@ -295,32 +321,32 @@ footer { background: var(--panel); border-top: 1px solid var(--line); padding: 6
   <div class="container">
     <div class="foot-grid">
       <div>
-        <div class="foot-logo"><span class="logo-badge">P</span> Precision Automotive</div>
-        <p class="foot-desc">Specialized auto repair for Japanese and German vehicles, serving Anaheim and Orange County. Dealership-quality service at a fair price.</p>
+        <div class="foot-logo"><span class="logo-badge">🛞</span> Gutierrez Tires</div>
+        <p class="foot-desc">Honest, fast tire and wheel service in Santa Ana since 1988. New and used tires, flat repairs, and more — at prices that can't be beat.</p>
       </div>
       <div class="foot-col">
         <h4>Services</h4>
         <ul class="foot-links">
-          <li><a href="#">Diagnostics</a></li>
-          <li><a href="#">Engine Repair</a></li>
-          <li><a href="#">Brakes & Suspension</a></li>
-          <li><a href="#">Maintenance</a></li>
-          <li><a href="#">Mobile Service</a></li>
+          <li><a href="#">New Tires</a></li>
+          <li><a href="#">Used Tires</a></li>
+          <li><a href="#">Flat Repair</a></li>
+          <li><a href="#">Balancing & Rotation</a></li>
+          <li><a href="#">Rim Repair</a></li>
         </ul>
       </div>
       <div class="foot-col">
         <h4>Contact</h4>
         <ul class="foot-links">
-          <li><a href="tel:7145833858">(714) 583-3858</a></li>
-          <li><a href="#">1631 N Placentia Ave, Ste U</a></li>
-          <li><a href="#">Anaheim, CA 92806</a></li>
-          <li><a href="#">Mon–Sat: 9:30AM–6PM</a></li>
+          <li><a href="tel:7148364822">(714) 836-4822</a></li>
+          <li><a href="#">601 N Fairview St</a></li>
+          <li><a href="#">Santa Ana, CA 92703</a></li>
+          <li><a href="#">Open 7 Days a Week</a></li>
         </ul>
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© 2026 Precision Automotive. All rights reserved.</span>
-      <span>Import & Luxury Specialists · Anaheim, CA</span>
+      <span>© 2026 Gutierrez Tire Shop. All rights reserved.</span>
+      <span>Serving Santa Ana Since 1988</span>
     </div>
   </div>
 </footer>
