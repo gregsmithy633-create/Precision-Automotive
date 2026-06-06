@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
 <title>Gutierrez Tire Shop</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -24,8 +25,8 @@
   --dark: #15171c;
 }
 
-html { scroll-behavior: smooth; }
-body { font-family: 'Manrope', sans-serif; background: var(--bg); color: var(--ink-soft); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+html { scroll-behavior: smooth; color-scheme: light only; }
+body { font-family: 'Manrope', sans-serif; background: #fbfaf8 !important; color: #383b42; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
 
 /* TOPBAR */
 .topbar { background: var(--dark); color: #c3c8d2; padding: 10px 0; font-size: 13px; }
@@ -66,15 +67,15 @@ nav { position: sticky; top: 0; z-index: 999; background: rgba(251,250,248,0.85)
 .hero-visual { position: relative; }
 .visual-card { background: var(--dark); border-radius: 24px; padding: 40px; color: #fff; position: relative; overflow: hidden; box-shadow: 0 30px 60px rgba(21,23,28,0.25); }
 .visual-card::before { content: ''; position: absolute; top: -60px; right: -60px; width: 200px; height: 200px; background: var(--blue); border-radius: 50%; opacity: 0.28; }
-.visual-label { font-size: 13px; font-weight: 600; color: #868d9b; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 10px; position: relative; }
+.visual-label { font-size: 13px; font-weight: 600; color: #b6bcc8; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 10px; position: relative; }
 .visual-phone { font-family: 'Sora', sans-serif; font-size: 38px; font-weight: 700; color: #fff; text-decoration: none; display: block; letter-spacing: -0.01em; position: relative; transition: color 0.2s; }
 .visual-phone:hover { color: #6da0ff; }
-.visual-hours { font-size: 14px; color: #868d9b; margin-top: 8px; position: relative; }
+.visual-hours { font-size: 14px; color: #b6bcc8; margin-top: 8px; position: relative; }
 .visual-divider { height: 1px; background: rgba(255,255,255,0.1); margin: 28px 0; position: relative; }
 .visual-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; position: relative; }
 .vstat-n { font-family: 'Sora', sans-serif; font-size: 30px; font-weight: 700; color: #fff; line-height: 1; }
-.vstat-l { font-size: 12px; color: #868d9b; margin-top: 5px; }
-.float-badge { position: absolute; background: var(--card); border-radius: 16px; padding: 16px 20px; box-shadow: 0 12px 32px rgba(0,0,0,0.12); display: flex; align-items: center; gap: 12px; bottom: -24px; left: -28px; }
+.vstat-l { font-size: 12px; color: #b6bcc8; margin-top: 5px; }
+.float-badge { position: absolute; background: var(--card); border-radius: 16px; padding: 16px 20px; box-shadow: 0 12px 32px rgba(0,0,0,0.12); display: flex; align-items: center; gap: 12px; bottom: -32px; right: -20px; }
 .float-icon { width: 40px; height: 40px; background: var(--amber); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; color: #fff; }
 .float-text strong { display: block; font-size: 14px; color: var(--ink); font-weight: 700; }
 .float-text span { font-size: 12px; color: var(--muted); }
@@ -91,17 +92,17 @@ nav { position: sticky; top: 0; z-index: 999; background: rgba(251,250,248,0.85)
 .sec-head { text-align: center; max-width: 600px; margin: 0 auto 60px; }
 .sec-head.left { text-align: left; margin-left: 0; }
 .sec-tag { display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blue); margin-bottom: 14px; }
-.sec-title { font-family: 'Sora', sans-serif; font-size: clamp(32px, 4.2vw, 48px); font-weight: 800; color: var(--ink); letter-spacing: -0.025em; line-height: 1.08; margin-bottom: 16px; }
-.sec-sub { font-size: 17px; color: var(--muted); line-height: 1.7; }
+.sec-title { font-family: 'Sora', sans-serif; font-size: clamp(32px, 4.2vw, 48px); font-weight: 800; color: #15171c !important; letter-spacing: -0.025em; line-height: 1.08; margin-bottom: 16px; }
+.sec-sub { font-size: 17px; color: #6a7280 !important; line-height: 1.7; }
 
 /* SERVICES */
 .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.svc { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 32px; transition: all 0.3s; }
+.svc { background: #ffffff !important; border: 1px solid var(--line); border-radius: 18px; padding: 32px; transition: all 0.3s; }
 .svc:hover { transform: translateY(-6px); box-shadow: 0 20px 44px rgba(21,23,28,0.08); border-color: transparent; }
 .svc-icon { width: 56px; height: 56px; border-radius: 14px; background: var(--blue-soft); display: flex; align-items: center; justify-content: center; font-size: 26px; margin-bottom: 20px; transition: all 0.3s; }
 .svc:hover .svc-icon { background: var(--blue); transform: scale(1.05); }
-.svc h3 { font-family: 'Sora', sans-serif; font-size: 19px; font-weight: 700; color: var(--ink); margin-bottom: 10px; letter-spacing: -0.01em; }
-.svc p { font-size: 14px; color: var(--muted); line-height: 1.65; }
+.svc h3 { font-family: 'Sora', sans-serif; font-size: 19px; font-weight: 700; color: #15171c !important; margin-bottom: 10px; letter-spacing: -0.01em; }
+.svc p { font-size: 14px; color: #6a7280 !important; line-height: 1.65; }
 
 /* WHY */
 .why { background: var(--card); }
@@ -124,10 +125,10 @@ nav { position: sticky; top: 0; z-index: 999; background: rgba(251,250,248,0.85)
 
 /* REVIEWS */
 .reviews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.rev { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 30px; transition: all 0.3s; }
+.rev { background: #ffffff !important; border: 1px solid var(--line); border-radius: 18px; padding: 30px; transition: all 0.3s; }
 .rev:hover { box-shadow: 0 16px 40px rgba(21,23,28,0.07); transform: translateY(-4px); }
 .rev-stars { color: var(--amber); font-size: 15px; letter-spacing: 1px; margin-bottom: 14px; }
-.rev-text { font-size: 15px; color: var(--ink-soft); line-height: 1.7; margin-bottom: 22px; }
+.rev-text { font-size: 15px; color: #383b42 !important; line-height: 1.7; margin-bottom: 22px; }
 .rev-author { display: flex; align-items: center; gap: 12px; }
 .rev-avatar { width: 42px; height: 42px; border-radius: 50%; background: var(--blue-soft); color: var(--blue); display: flex; align-items: center; justify-content: center; font-family: 'Sora', sans-serif; font-weight: 700; font-size: 15px; }
 .rev-name { font-size: 14px; font-weight: 700; color: var(--ink); }
@@ -140,12 +141,12 @@ nav { position: sticky; top: 0; z-index: 999; background: rgba(251,250,248,0.85)
 .cta-card::after { content: ''; position: absolute; bottom: -100px; left: 10%; width: 240px; height: 240px; border: 50px solid rgba(255,255,255,0.04); border-radius: 50%; }
 .cta-inner { position: relative; z-index: 2; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: center; }
 .cta-inner h2 { font-family: 'Sora', sans-serif; font-size: clamp(32px, 4vw, 48px); font-weight: 800; color: #fff; letter-spacing: -0.025em; line-height: 1.08; margin-bottom: 16px; }
-.cta-inner p { font-size: 17px; color: #9aa1af; line-height: 1.7; margin-bottom: 32px; }
+.cta-inner p { font-size: 17px; color: #b6bcc8; line-height: 1.7; margin-bottom: 32px; }
 .cta-phone-box { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 18px; padding: 30px; }
-.cta-phone-label { font-size: 13px; color: #868d9b; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
+.cta-phone-label { font-size: 13px; color: #b6bcc8; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
 .cta-phone-num { font-family: 'Sora', sans-serif; font-size: 32px; font-weight: 700; color: #fff; text-decoration: none; display: block; transition: color 0.2s; }
 .cta-phone-num:hover { color: #6da0ff; }
-.cta-addr { font-size: 14px; color: #9aa1af; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.1); line-height: 1.6; }
+.cta-addr { font-size: 14px; color: #b6bcc8; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.1); line-height: 1.6; }
 
 /* FOOTER */
 footer { background: var(--card); border-top: 1px solid var(--line); padding: 60px 0 30px; }
